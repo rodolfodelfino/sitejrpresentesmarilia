@@ -269,10 +269,11 @@ form {
     border: none;
     padding: 10px;
     cursor: pointer;
+    box-shadow: 2px 2px 1px rgb(7, 7, 7);
   }
   
   button:hover {
-    background-color: #368e73;
+    background-color: #0400fa;
   }
   
   /* Estilos CSS para a tabela */
