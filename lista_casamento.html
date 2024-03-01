@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Vendas</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logo.png" alt="">
+        <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="utiliadades.html">Utilidades</a>
+            <a href="cama_mesa_banho.html">Cama Mesa e Banho</a>
+            <a href="decoracao.html">Decoração</a>
+            <a href="presentes.html">Presentes</a>
+            <a href="lista_casamento.html">Listas de Casamento</a>
+            <a href="lista_cha_cozinha.html">Listas de Chá de Cozinha</a>
+        </nav>
+    </header>
+    <section class="carousel">
+        <img class="slide" src="img/product1.jpg" alt="Produto 1">
+        <img class="slide" src="img/product2.jpg" alt="Produto 2">
+        <img class="slide" src="img/product3.jpg" alt="Produto 3">
+        <img class="slide" src="img/product4.jpg" alt="Produto 4">
+        <img class="slide" src="img/product5.jpg" alt="Produto 5">
+    </section>
+    <section class="banner">
+        <h2>Bem-vindo à Jr Presentes, a loja perfeita para fazer sua lista de casamento</h2>
+        <p>Faça a lista de presentes perfeita para seu casamento dos sonhos</p>
+        <a href="https://api.whatsapp.com/send?phone=5514997414810&text=Ol%C3%A1,%20gostaria%20de%20saber%20como%20funciona%20para%20fazer%20uma%20lista%20na%20loja?" class="btn">Fale conosco</a>
+    </section>
+
+
+
+    <section class="how-to">
+        <h2>Como Funciona</h2>
+        <ol>
+            <li>Registre-se na nossa loja</li>
+            <li>Crie sua lista de presentes personalizada</li>
+            <li>Compartilhe sua lista com seus convidados</li>
+            <li>Receba os presentes dos seus sonhos</li>
+        </ol>
+    </section>
+
+    <div>
+        <h1>Temos uma grande variedade de produtos com as melhores marcas.</h1>
+        <p>Ofereçemos o melhor atendimento, suporte e os melhores produtos de Marília e região.</p>
+    </div>
+    <form id="meuFormulario">
+        <!-- Campos adicionais -->
+        <label for="noivo">Nome do Noivo:</label>
+        <input type="text" id="noivo" name="noivo" required>
+    
+        <label for="telefoneNoivo">Telefone do Noivo:</label>
+        <input type="text" id="telefoneNoivo" name="telefoneNoivo" required>
+    
+        <label for="enderecoNoivo">Endereço do Noivo:</label>
+        <input type="text" id="enderecoNoivo" name="enderecoNoivo" required>
+    
+        <label for="noiva">Nome da Noiva:</label>
+        <input type="text" id="noiva" name="noiva" required>
+    
+        <label for="telefoneNoiva">Telefone da Noiva:</label>
+        <input type="text" id="telefoneNoiva" name="telefoneNoiva" required>
+    
+        <label for="dataCasamento">Data do Casamento:</label>
+        <input type="text" id="dataCasamento" name="dataCasamento" required>
+    
+        <label for="enderecoEntrega">Endereço da Entrega dos Presentes:</label>
+        <input type="text" id="enderecoEntrega" name="enderecoEntrega" required>
+    
+        <button type="submit">Enviar por WhatsApp</button>
+      </form>
+      
+      <script>
+        document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+          event.preventDefault(); // Impede o envio do formulário via método GET ou POST
+          
+          // Obtenha os valores dos campos do formulário
+          const noivo = document.getElementById("noivo").value;
+          const telefoneNoivo = document.getElementById("telefoneNoivo").value;
+          const enderecoNoivo = document.getElementById("enderecoNoivo").value;
+          const noiva = document.getElementById("noiva").value;
+          const telefoneNoiva = document.getElementById("telefoneNoiva").value;
+          const dataCasamento = document.getElementById("dataCasamento").value;
+          const enderecoEntrega = document.getElementById("enderecoEntrega").value;
+          
+          // Monta os dados em uma tabela
+          const tabela = `
+
+            Gostaria de fazer minha lIsta de Casamento na JR Presentes.
+            Dados da Lista de Casamento
+            Nome do Noivo: ${noivo}
+            Telefone do Noivo: ${telefoneNoivo}
+            Endereço do Noivo: ${enderecoNoivo}
+            Nome da Noiva ${noiva}
+            Telefone da Noiva: ${telefoneNoiva}
+            Data do Casamento: ${dataCasamento}
+            Endereço da Entrega dos Presentes: ${enderecoEntrega}
+            
+          `;
+          
+          // Abre uma nova janela do WhatsApp com a tabela pré-preenchida
+          window.open(`https://api.whatsapp.com/send?phone=+5514997414810&text=${encodeURIComponent(tabela)}`);
+          
+          // Limpa os campos do formulário após o envio
+          document.getElementById("noivo").value = "";
+          document.getElementById("telefoneNoivo").value = "";
+          document.getElementById("enderecoNoivo").value = "";
+          document.getElementById("noiva").value = "";
+          document.getElementById("telefoneNoiva").value = "";
+          document.getElementById("dataCasamento").value = "";
+          document.getElementById("enderecoEntrega").value = "";
+        });
+      </script>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Jr Presentes</p>
+            <p>Endereço: R. Dom Pedro II, 190 - Centro, Marília - SP, 17500-110</p>
+            <p>Telefone: <a href="tel:+551434221910">(14) 3422-1910</a></p>
+            <a href="https://api.whatsapp.com/send?phone=5514997414810&text=Ol%C3%A1,%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20que%20vi%20no%20site!">Celular e WhatsApp: (14) 99741-4810</a><p></p>
+        </div>
+    </footer>
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }, 5000);
+
+        
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+
+    
+
+    </script>
+</body>
+</html>
