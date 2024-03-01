@@ -339,15 +339,14 @@ form {
 .menu-n2{
   display: contents;
   font-size: small;
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
 button {
   background-color: #072af1;
   color: white;
-  border: none;
   padding: 10px;
   cursor: pointer;
-  box-shadow: 2px 2px 1px rgb(7, 7, 7);
+  box-shadow: -0px 0px 4px 1px rgb(12, 12, 12);
 }
 }
