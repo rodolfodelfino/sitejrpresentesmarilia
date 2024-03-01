@@ -209,6 +209,10 @@ body {
     font-size: 30px;
 }
 
+.menu-n2{
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
     header {
       padding: 10px;
@@ -298,7 +302,7 @@ form {
     display: block;
     background: none;
     border: none;
-    color: #333333;
+    color: #faf9f9;
     font-size: 22px;
     padding: 10px;
     cursor: pointer;
@@ -329,5 +333,11 @@ form {
 /* Estilo da navegação expandida */
 .nav-menu.active {
     display: block;
+}
+
+.menu-n2{
+  display: contents;
+  font-size: small;
+  margin-right: 2px;
 }
 }
