@@ -341,4 +341,13 @@ form {
   font-size: small;
   margin-right: 2px;
 }
+
+button {
+  background-color: #072af1;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 1px rgb(7, 7, 7);
+}
 }
